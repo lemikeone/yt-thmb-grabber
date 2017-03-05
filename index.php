@@ -29,7 +29,7 @@ if (isset($match[1])) {
 	
 }
 else {
-	
+	echo '<p class="bg-danger">Veuillez entrer une URL Youtube valide</p><br/>';
 }
 ?>
 

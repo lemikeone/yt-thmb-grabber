@@ -1,4 +1,4 @@
-<h1>YouTube thumbnail picker</h1><br/><br/>
+<h1>Thumbnail picker</h1><br/>
     <form method="GET" action="index.php">
     <div class="input-group">
       <input type="text" class="form-control" name="youtube_link" placeholder="Enter Youtube URL or embed code">

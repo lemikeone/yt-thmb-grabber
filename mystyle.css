@@ -4,9 +4,9 @@
 		max-width: 700px;
 		border-width:1px;
 		border-color: #e0e0e0;
-		border-radius: 0px;
+		border-radius: 3px;
 		border-style:solid;
-		box-shadow: 0px 0px 6px grey;
+		box-shadow: 0px 0px 1px grey;
 		background-color: white;
 	}
 .fond {

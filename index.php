@@ -53,11 +53,11 @@ if (isset($youtube_id)) {
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-  <li><a href="http://img.youtube.com/vi/' .$match[1]. '/maxresdefault.jpg" download="myimage">Maximum quality (Default)</a></li>
+  <li><a href="http://img.youtube.com/vi/' .$match[1]. '/maxresdefault.jpg" download="myimage">Default : Maximum Resolution Thumbnail (1920x1080 pixels)</a></li>
   <li role="separator" class="divider"></li>
-    <li><a href="http://img.youtube.com/vi/' .$match[1]. '/mqdefault.jpg" download="myimage">Medium quality</a></li>
-      <li><a href="http://img.youtube.com/vi/' .$match[1]. '/sddefault.jpg" download="myimage">Standard quality</a></li>
-    <li><a href="http://img.youtube.com/vi/' .$match[1]. '/hqdefault.jpg" download="myimage">High quality</a></li>
+    <li><a href="http://img.youtube.com/vi/' .$match[1]. '/mqdefault.jpg" download="myimage">Medium Quality Thumbnail (320x180 pixels)</a></li>
+        <li><a href="http://img.youtube.com/vi/' .$match[1]. '/hqdefault.jpg" download="myimage">High Quality Thumbnail (480x360 pixels)</a></li>
+      <li><a href="http://img.youtube.com/vi/' .$match[1]. '/sddefault.jpg" download="myimage">Standard Definition Thumbnail (640x480 pixels)</a></li>
   </ul>
 </div>
 
@@ -71,7 +71,7 @@ if (isset($youtube_id)) {
 	while ($number_youtube <= 3)
 	{
 		echo '<div class="col-xs-6 col-md-4">
-		<a class="thumbnail">
+		<a class="thumbnail" href="http://img.youtube.com/vi/' .$match[1]. '/' .$number_youtube. '.jpg">
 		<img class="img-thumbnail" src="http://img.youtube.com/vi/' .$match[1]. '/' .$number_youtube. '.jpg" alt="...">
 		</a>
 		</div>';

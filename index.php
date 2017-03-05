@@ -10,21 +10,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="text-center"><img src="YouTube-logo-full_color.png" width="200px"></div>
+<?php include("logo.php"); ?>
 <div class="container containerm">
 <div class="text-center">
    <?php include("ytsearch.php"); ?>
 
 <?php
 
-if (isset($_GET['youtube_link'])) // On a le nom et le prénom
+if (isset($_GET['youtube_link'])) // On a un contenu
 {
 	$url = $_GET['youtube_link'];
 
 	// Youtube ID extract
 	preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match);
+
+if (isset($match[1])) {
 	$youtube_id = $match[1];
-	?>
+	
+}
+else {
+	
+}
+?>
+
+	<?php 
+
+if (isset($youtube_id)) {
+	# code...
+
+	 ?>
 
 	<?php
 	echo '<img class="img-thumbnail" src="http://img.youtube.com/vi/' .$match[1]. '/maxresdefault.jpg">';
@@ -39,10 +53,10 @@ if (isset($_GET['youtube_link'])) // On a le nom et le prénom
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-  <li><a href="http://img.youtube.com/vi/' .$match[1]. '/maxresdefault.jpg" download="myimage">Maximum resolution (Default)</a></li>
+  <li><a href="http://img.youtube.com/vi/' .$match[1]. '/maxresdefault.jpg" download="myimage">Maximum quality (Default)</a></li>
   <li role="separator" class="divider"></li>
-    <li><a href="http://img.youtube.com/vi/' .$match[1]. '/sddefault.jpg" download="myimage">Standard definition</a></li>
     <li><a href="http://img.youtube.com/vi/' .$match[1]. '/mqdefault.jpg" download="myimage">Medium quality</a></li>
+      <li><a href="http://img.youtube.com/vi/' .$match[1]. '/sddefault.jpg" download="myimage">Standard quality</a></li>
     <li><a href="http://img.youtube.com/vi/' .$match[1]. '/hqdefault.jpg" download="myimage">High quality</a></li>
   </ul>
 </div>
@@ -62,6 +76,8 @@ if (isset($_GET['youtube_link'])) // On a le nom et le prénom
 		</a>
 		</div>';
 		$number_youtube++;
+	}
+
 	}
 
 }

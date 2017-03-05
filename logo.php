@@ -1,0 +1,1 @@
+<div class="text-center"><a href="index.php"><img src="YouTube-logo-full_color.png" width="200px"></a></div>
